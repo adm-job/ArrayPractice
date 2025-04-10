@@ -8,6 +8,7 @@ class Program
     {
         //Массив палетт под номирами сортировка
         //The array of pallets under the numbers is sorted
+
         string[] pallets = ["B14", "A11", "B12", "A13"];
 
         Console.WriteLine("Sorted...");
@@ -57,6 +58,31 @@ class Program
             Console.WriteLine($"-- {pallet}");
         }
 
+        string value = "abc123";
+        char[] valueArray = value.ToCharArray();
+        Console.WriteLine(value);
+        foreach (var i in valueArray)
+        {
+            Console.Write($"\t{i}");
+        }
+        Console.WriteLine();
+        Array.Reverse(valueArray);
+        foreach (var i in valueArray)
+        {
+            Console.Write($"\t{i}");
+        }
+        string result = new string(valueArray);
+        Console.WriteLine();
+        Console.WriteLine(result);
 
+        result = String.Join(",", valueArray);
+        Console.WriteLine(result);
+
+
+        string[] items = result.Split(',');
+        foreach (string item in items)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
